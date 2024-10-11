@@ -1,0 +1,238 @@
+{"intents":[
+		{"tag": "greeting",
+		 "all_questions": ["Hi", "Hello", "How are you?", "How do you do?", "Is anyone there?", "What's up?", "Are you fine",
+      	"Howdy"],
+		 "sub_tags":[
+		 	{
+		 		"sub":"normal-greeting",
+		 		"questions": ["Hi", "Hello", "Hey!", "Howdy", "Hola", "Hhh"],
+		 		"answers": ["Hi", "Hello", "Hey!", "Howdy"]
+		 	},
+		 	{
+		 		"sub": "asking",
+		 		"questions": ["How are you?", "How do you do?", "Is anyone there?", "What's up?", "Are you fine", "Hows you?",
+		 			"Whats going on?"],
+		 		"answers": ["I am fine, what about you?", "I am good!", "I am fine, you say"]
+		 	}
+		 ]
+		},
+		{"tag":"name",
+		 "all_questions": ["Hi, what's your name?", "Hello, may I know your name", "Tell me your name?","May I know your name", "whats your good name",
+         "What should I call you?", "Do you have a name?", "what is your name?", "My name is john, what's your name?"],
+         "sub_tags":[
+         	{
+         		"sub": "normal-ask-name",
+         		"questions": ["Hi, what's your name?", "Hello, may I know your name", "Tell me your name?","May I know your name", "whats your good name",
+         		"What should I call you?", "Do you have a name?", "what is your name?"],
+         		"answers": ["I am Boss!", "You can call me Boss!", "My name is Boss!", "Hello, I am Boss", "Good to see you, I am Boss"]
+         	}	
+         ]
+		},
+		{"tag":"days",
+		 "all_questions": ["whats the date on monday?", "whats the date on tuesday?", "whats the date on wednesday?",
+		 			"whats the date on thursday?","whats the date on friday?","whats the date on saturday?","whats the date on sunday?",
+		 			"whats the date on coming sunday?", "whats the date on coming monday?", "whats the date on coming tuesday?",
+		 			"whats the date on coming wednesday?", "whats the date on coming thursday?", "whats the date on coming friday?",
+		 			"whats the date on coming saturday?", "date on coming monday?", "date tomorrow?", "whats the date tomorrow",
+		 			"date monday", "date tuesday", "date wednesday", "date thursday", "date friday", "date saturday",
+		 			"date sunday", "what month is this?", "whats day today", "whats date today",
+		 			"what is sunday?", "what is monday", "what is thursday", "what are days",
+		    		"what are friday","am i busy on sunday","am i busy on 31st august","is there any commitment for 16th febraury", 
+		    		"whats the event on monday","whats the event on tuesday", "whats the event on wednesday",
+		    		"whats the event on thursday", "whats the event on friday", "whats the event on saturday",
+		    		"whats the event on sunday", "do I have plans on sunday", "is there any event on 5th september",
+		    		"do i have plans on friday", "what are my plans on sunday", "what are my plans on monday",
+		    		"tell me my plans on 16th november", "what are my plans on tuesday 13th", 
+		    		"what are my plans on 22nd november", "do I have any event on 21st december", "Is there any event on 30th january",
+		    		"what are events on next monday","do I have any event this tuesday", "events on 21st june",
+		    		"events on 3rd may", "events on coming friday", "plans on next month", "do i have some commitments this thursday",
+		    		"what are my commitments for sunday", "what are commitments for 23rd april",
+		    		"what are my upcoming events", "what are commitments next days", "tell me my upcoming plans",
+					"what are the commitments i have for next days", "tell me all the plans of mine", "what are the plans i have next",
+		    		"give all the plans i have", "upcoming plans", "all upcoming events", "do i have any plans now", 
+		    		"do i have any events", "do i have some commitments now", "is there any event left", "is there any plan i am forgetting",
+		    		"remind me my plans", "remind my the upcoming events"],
+		 "sub_tags": [
+		 	{
+		 		"sub": "know-date",
+		 		"questions": ["whats the date on monday?", "whats the date on tuesday?", "whats the date on wednesday?",
+		 			"whats the date on thursday?","whats the date on friday?","whats the date on saturday?","whats the date on sunday?",
+		 			"whats the date on coming sunday?", "whats the date on coming monday?", "whats the date on coming tuesday?",
+		 			"whats the date on coming wednesday?", "whats the date on coming thursday?", "whats the date on coming friday?",
+		 			"whats the date on coming saturday?", "date on coming monday?", "date tomorrow?", "whats the date tomorrow",
+		 			"date monday", "date tuesday", "date wednesday", "date thursday", "date friday", "date saturday",
+		 			"date sunday", "what month is this?", "whats day today", "whats date today"],
+		 		"answers": ["none-from-here"]
+		    },
+		    {
+		    	"sub": "get-events",
+		    	"questions": ["am i busy on sunday","am i busy on 31st august","is there any commitment for 16th febraury", 
+		    				 "whats the event on monday","whats the event on tuesday", "whats the event on wednesday",
+		    				 "whats the event on thursday", "whats the event on friday", "whats the event on saturday",
+		    				 "whats the event on sunday", "do I have plans on sunday", "is there any event on 5th september",
+		    				 "do i have plans on friday", "what are my plans on sunday", "what are my plans on monday",
+		    				 "tell me my plans on 16th november", "what are my plans on tuesday 13th", 
+		    				 "what are my plans on 22nd november", "do I have any event on 21st december", "Is there any event on 30th january",
+		    				 "what are events on next monday","do I have any event this tuesday", "events on 21st june",
+		    				 "events on 3rd may", "events on coming friday", "plans on next month", "do i have some commitments this thursday",
+		    				 "what are my commitments for sunday", "what are commitments for 23rd april"],
+		    	"answers": ["none"]
+		    },
+		    {
+		    	"sub": "normal",
+		    	"questions": ["what is sunday?", "what is monday", "what is thursday", "what are days",
+		    				 "what are friday"],
+		    	"answers": ["Its just a normal day!", "Do not you have any plans that day?"]
+		    },
+		    {
+		    	"sub": "all-events",
+		    	"questions": ["what are my upcoming events", "what are commitments next days", "tell me my upcoming plans",
+		    				 "what are the commitments i have for next days", "tell me all the plans of mine", "what are the plans i have next",
+		    				 "give all the plans i have", "upcoming plans", "all upcoming events", "do i have any plans now", 
+		    				 "do i have any events", "do i have some commitments now", "is there any event left", "is there any plan i am forgetting",
+		    				 "remind me my plans", "remind my the upcoming events"],
+		    	"answers": ["No upcoming events"]
+		    }
+			]
+		},
+		{
+			"tag": "notes",
+			"all_questions": ["write down for me", "write this down for me", "will you write this for me",
+							 "please write something for me", "could you please write one thing for me", 
+							 "can you make a note", "make a note", "type this", "please type this", "can you type something for me",
+							 "make some note", "remember this", "can you remember one thing for me", "write this", "note it", "note this",
+							 "remember it"],
+			"sub_tags": [
+				{
+					"sub": "make-notes",
+					"questions": ["write down for me", "write this down for me", "will you write this for me",
+								 "please write something for me", "could you please write one thing for me", 
+								 "can you make a note", "make a note", "type this", "please type this", "can you type something for me",
+								 "make some note", "remember this", "can you remember one thing for me", "write this", "note it", "note this",
+								 "remember it"],
+					"answers":["Sure"]
+				}
+			]
+		},
+		{
+			"tag": "age-work",
+			"all_questions": ["what is your age", "how old are you", "do you have some age",
+							 "are you older than me", "when were you born?", "are you younger than me",
+							 "tell me your age", "are you old", "are you young","what is your work", "what do you do?", "what is your daily routine",
+							 "do you have a job?", "whats your hobby", "what you do in your day",
+							 "do you have any hobby","what do you like to do", "what you love the most"],
+			"sub_tags": [
+				{
+					"sub": "age",
+					"questions": ["what is your age", "how old are you", "do you have some age",
+							 "are you older than me", "when were you born?", "are you younger than me",
+							 "tell me your age", "are you old", "are you young"],
+					"answers": ["Do you really think I would have some age?", "I am a computer programme. How am I supposed to have an age!",
+								"How can I have some age, I am a computer programme!"]
+				},
+				{
+					"sub": "work",
+					"questions": ["what is your work", "what do you do?", "what is your daily routine",
+								 "do you have a job?", "what you do in your day"],
+					"answers": ["I help others", "I do work for others and talk to them",
+								"I help people"]
+				},
+				{
+					"sub": "hobby",
+					"questions": ["what are your hobbies","whats your hobby","do you have any hobby","what do you like to do", "what you love the most"],
+					"answers": ["I like to talk to people very much.", "I like talking with people and helping them!"]
+				}
+			]
+		},
+		{
+			"tag": "google-search",
+			"all_questions": ["can you search something for me", "search this for me","make a google search",
+							 "hey, can you search one thing for me", "can you search something on google",
+							 "perform a google search", "search on google", "search google"],
+			"sub_tags": [
+				{
+					"sub": "search-google",
+					"questions": ["can you search something for me", "search this for me","make a google search",
+								"hey, can you search one thing for me", "can you search something on google",
+								"perform a google search", "search on google", "search google"],
+					"answers": ["Sure, let me search!"]
+				}
+			]
+		},
+		{
+			"tag": "weather-api-call",
+			"all_questions": ["can you tell me something about the weather conditions", "what is the current weather conditions","I want to go out now is it raining",
+							 "hey, how is the weather", "hey, tell me about the weather conditions i want to go out for a walk",
+							 "what is the current temperature", "Is it cloudy outside", "is it sunny outside", "is it raining", "how is the weather"],
+			"sub_tags": [
+				{
+					"sub": "call-weather-api",
+					"questions": ["can you tell me something about the weather conditions", "what is the current weather conditions","I want to go out now is it raining",
+							 "hey, how is the weather", "hey, tell me about the weather conditions i want to go out for a walk",
+							 "what is the current temperature", "Is it cloudy outside", "is it sunny outside", "is it raining", "how is the weather"],
+					"answers": ["Sure, let me find out"]
+				}
+			]
+		},
+		{
+			"tag": "open-visual-studio-code",
+			"all_questions": ["Hey open Visual Studio code", "Can you open visual studio for me",
+							 "hey open visual studio for me", "Hello I want to do some coding",
+							 "open VS code", "Hey open VS code", "Can you open VS code for me", "hey open VS code for me"],
+			"sub_tags": [
+				{
+					"sub": "visual-studio-code-open",
+					"questions": ["Hey open Visual Studio code", "Can you open visual studio for me",
+							 "hey open visual studio for me", "Hello I want to do some coding",
+							 "open VS code", "Hey open VS code", "Can you open VS code for me", "hey open VS code for me"],
+					"answers": ["Sure sir, opening Visual Studio Code, please wait!"]
+				}
+			]
+		},
+		{
+			"tag": "open-music",
+			"all_questions": ["Hey! i want to listen some music", "Can you play some music for me",
+							 "Play music", "Play songs", "its music time", "its coffee time",
+							 "open music app", "its coffee time Boss", "Hello play songs for me", "hey play some music"],
+			"sub_tags": [
+				{
+					"sub": "music-open",
+					"questions": ["Hey! i want to listen some music", "Can you play some music for me",
+							 "Play music", "Play songs", "its music time", "its coffee time", "its music time",
+							 "open music app", "its coffee time Boss", "Hello play songs for me", "hey play some music"],
+					"answers": ["Sure sir, opening Spotify, please wait!"]
+				}
+			]
+		},
+		{
+			"tag": "open-wikipedia",
+			"all_questions": ["Hey! search on wikipedia about dhoni", "search on wikipedia about dhoni",
+							 "According to wikipedia who is Dhoni", "According to wikipedia what is maths", "who is dhoni according to wikipedia",
+							 "show me the search results of wikipedia on dhoni"],
+			"sub_tags": [
+				{
+					"sub": "wikipedia-open",
+					"questions": ["Hey! search on wikipedia about dhoni", "search on wikipedia about dhoni",
+							 "According to wikipedia who is Dhoni", "According to wikipedia what is maths", "who is dhoni according to wikipedia",
+							 "show me the search results of wikipedia on dhoni"],
+					"answers": ["Sure sir, looking wikipedia for information, please wait!"]
+				}
+			]
+		},
+		{
+			"tag": "send-mails",
+			"all_questions": ["Hey! can you send a mail", "Boss send a mail",
+							 "send a mail", "please send a mail", "compose a mail", "please compose a mail",
+							 "send an email", "Please send an email", "compose an  email"],
+			"sub_tags": [
+				{
+					"sub": "mails-send",
+					"questions": ["Hey! can you send a mail", "Boss send a mail",
+							 "send a mail", "please send a mail", "compose a mail", "please compose a mail",
+							 "send an email", "Please send an email", "compose an  email"],
+					"answers": ["Sure sir !"]
+				}
+			]
+		}
+	]
+}
